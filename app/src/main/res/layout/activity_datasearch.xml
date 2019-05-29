@@ -1,0 +1,109 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/list_background"
+    android:orientation="vertical" >
+
+    <com.mingrisoft.notes.view.AbScrollView
+        android:id="@+id/absclv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <com.mingrisoft.notes.view.MyGridView
+                android:id="@+id/lv_notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="2"
+                android:verticalSpacing="10dp" >
+            </com.mingrisoft.notes.view.MyGridView>
+        </LinearLayout>
+    </com.mingrisoft.notes.view.AbScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/navigationbar_bg" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/navigationbar_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <Button
+            android:onClick="onBack"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/navigationbar_backup" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="查  询  结  果      "
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="@color/lan"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/navigationbar_bg" 
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/icon"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@id/iv_icon"
+            android:gravity="center_vertical"
+            android:text="记事本"
+            android:textSize="20dp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_setting"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/navigationbar_setting"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:background="@drawable/add1" />
+    </RelativeLayout>
+
+</RelativeLayout>
